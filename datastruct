@@ -1,0 +1,25 @@
+class InputOrder(BaseStruct): #输入报单
+    def __init__(self, BrokerID='', InvestorID='', InstrumentID='', OrderRef='', UserID='', OrderPriceType=OPT_AnyPrice, Direction=D_Buy, CombOffsetFlag='', CombHedgeFlag='', LimitPrice=0.0, VolumeTotalOriginal=0, TimeCondition=TC_IOC, GTDDate='', VolumeCondition=VC_AV, MinVolume=0, ContingentCondition=CC_Immediately, StopPrice=0.0, ForceCloseReason=FCC_NotForceClose, IsAutoSuspend=0, BusinessUnit='', RequestID=0, UserForceClose=0, IsSwapOrder=0):
+        self.BrokerID = '' #经纪公司代码, char[11]
+        self.InvestorID = '' #投资者代码, char[13]
+        self.InstrumentID = '' #合约代码, char[31]
+        self.OrderRef = '' #报单引用, char[13]
+        self.UserID = '' #用户代码, char[16]
+        self.OrderPriceType = '' #报单价格条件, char
+        self.Direction = '' #买卖方向, char
+        self.CombOffsetFlag = '' #组合开平标志, char[5]
+        self.CombHedgeFlag = '' #组合投机套保标志, char[5]
+        self.LimitPrice = 'Price' #价格, double
+        self.VolumeTotalOriginal = 'Volume' #数量, int
+        self.TimeCondition = '' #有效期类型, char
+        self.GTDDate = 'Date' #GTD日期, char[9]
+        self.VolumeCondition = '' #成交量类型, char
+        self.MinVolume = 'Volume' #最小成交量, int
+        self.ContingentCondition = '' #触发条件, char
+        self.StopPrice = 'Price' #止损价, double
+        self.ForceCloseReason = '' #强平原因, char
+        self.IsAutoSuspend = 'Bool' #自动挂起标志, int
+        self.BusinessUnit = '' #业务单元, char[21]
+        self.RequestID = '' #请求编号, int
+        self.UserForceClose = 'Bool' #用户强评标志, int
+        self.IsSwapOrder = 'Bool' #互换单标志, int
